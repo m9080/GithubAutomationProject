@@ -7,52 +7,39 @@ import org.openqa.selenium.support.PageFactory;
 import utils.ConfigPropertyFileReader;
 
 public class GitHubLoginPage {
-	WebDriver driver;
-	
-	
-	public static void main(String [] args) {
-		try {
-		String LoginPageUrl =ConfigPropertyFileReader.getConfigDetail("LOGINPAGEURL");
-		System.out.println(LoginPageUrl);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-	}
-	
-	
-	
-	
-	
-	@FindBy(id="login_field")
-	WebElement LoginPagePassWordBoxId;
-	
-	@FindBy(id="//input[@id='login_field']")
-	WebElement LoginPagePassWordBoxXpath;
-	
-	@FindBy(id="password")
-	WebElement LoginPageUserNameBoxId;
-	
-	@FindBy(id="//input[@id='password']")
-	WebElement LoginPageUserNameBoxXpath;
-	
-	@FindBy(name="commit")
-	WebElement LoginPageSignInButtonName;
-	
-	@FindBy(xpath="//input[@name='commit']")
-	WebElement LoginPageSignInButtonXpath;
+public	WebDriver driver;
 
-	@FindBy(id="forgot-password")
-	WebElement LoginPageForgetPassWordId;
 	
-	@FindBy(xpath="//a[@id='forgot-password']")
-	WebElement LoginPageForgetPassWordXpath;
+	
+	@FindBy(id = "login_field")
+	public WebElement LoginPageUserNameBoxId;
+	
+	@FindBy(xpath = "//input[@id='login_field']")
+	public WebElement LoginPageUserNameBoxXpath;
 
-	public  void GitHubLoginPage(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
+	@FindBy(id = "password")
+	public WebElement LoginPagePassWordBoxId;
+
+	@FindBy(xpath = "//input[@id='password']")
+	public WebElement LoginPagePassWordBoxXpath;
+
+	
+	
+	@FindBy(name = "commit")
+	public WebElement LoginPageSignInButtonName;
+	
+	@FindBy(xpath = "//input[@name='commit']")
+	public WebElement LoginPageSignInButtonXpath;
+
+	@FindBy(id = "forgot-password")
+	public WebElement LoginPageForgetPassWordId;
+	
+	@FindBy(xpath = "//a[@id='forgot-password']")
+	public WebElement LoginPageForgetPassWordXpath;
+ 
+	public GitHubLoginPage(WebDriver driver) {
+	    this.driver = driver;
+	    PageFactory.initElements(driver, this);
 	}
 
 }

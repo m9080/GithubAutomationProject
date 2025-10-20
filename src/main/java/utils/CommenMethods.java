@@ -1,27 +1,32 @@
 package utils;
-
-import utils.CommenMenthodsWait;
-import utils.CommenMethodsBrowserOperation;
+import utils.CommenMethodsWait;
 import utils.CommenMethodsPageOperation;
 import utils.CommenScreenshot;
 
+import org.openqa.selenium.WebDriver;
+
+import utils.CommenMethodsBrowserOperation;
 
 public class CommenMethods {
-
-	public CommenMenthodsWait waits;
+    public CommenMethodsWait waits;
     public CommenMethodsPageOperation pageOps;
-    public CommenMethodsBrowserOperation browserOps;
-    public CommenScreenshot ScreenShort;
-
+    public CommenScreenshot screenshot;
+    public CommenMethodsBrowserOperation BrowserOps;
+/*
     public CommenMethods() {
-        waits = new CommenMenthodsWait();
+        waits = new CommenMethodsWait();
         pageOps = new CommenMethodsPageOperation();
-        browserOps = new CommenMethodsBrowserOperation();
-        ScreenShort = new CommenScreenshot();
-
-        
+        screenshot = new CommenScreenshot();
+        BrowserOps = new CommenMethodsBrowserOperation();
     }
     
+    */
     
-
+    
+ 
+        public CommenMethods(WebDriver driver) {
+            waits = new CommenMethodsWait(driver);
+        }
+        
+        
 }

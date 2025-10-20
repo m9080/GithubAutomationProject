@@ -8,9 +8,12 @@ public class ExtentManager {
 
     public static ExtentReports getInstance() {
         if (extent == null) {
-            ExtentSparkReporter spark = new ExtentSparkReporter("Reports/ExtentReport.html");
+            ExtentSparkReporter reporter = new ExtentSparkReporter("Reports/ExtentReport.html");
+            reporter.config().setReportName("GitHub Automation Report");
+            reporter.config().setDocumentTitle("Test Results");
+
             extent = new ExtentReports();
-            extent.attachReporter(spark);
+            extent.attachReporter(reporter);
         }
         return extent;
     }

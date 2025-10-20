@@ -1,0 +1,13 @@
+2025-10-20 17:04:44 [main] INFO  utils.Log - 🔄 Starting scenario: Login with valid credentials and logout Before Hooks Starts
+2025-10-20 17:04:44 [main] INFO  utils.Log - Completed setup for scenario: Login with valid credentials and logout Before Hooks completed
+2025-10-20 17:04:44 [main] INFO  utils.Log - Launching browser and navigating to GitHub login page
+2025-10-20 17:04:44 [main] INFO  utils.Log - Launching browser: chrome
+2025-10-20 17:04:46 [main] DEBUG utils.Log - chrome launched successfully.
+2025-10-20 17:04:46 [main] INFO  utils.Log - GitHub login page loaded
+2025-10-20 17:04:46 [main] INFO  utils.Log - Entering valid GitHub credentials
+2025-10-20 17:04:46 [main] INFO  utils.Log - Clicking login button
+2025-10-20 17:04:48 [main] INFO  utils.Log - Verifying successful login
+2025-10-20 17:04:58 [main] INFO  utils.Log - 🧹 Tearing down scenario: Login with valid credentials and logout After Hooks Starts
+2025-10-20 17:04:59 [main] INFO  utils.Log - Browser quit successfully.
+2025-10-20 17:04:59 [main] DEBUG utils.Log - 🔒 Browser session ended. After Hooks
+2025-10-20 17:04:59 [main] INFO  utils.Log - Completed teardown for scenario: Login with valid credentials and logout After Hooks ends
